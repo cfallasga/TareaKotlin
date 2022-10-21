@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    tools:context=".ui.estado.UpdateEstadoFragment">
+
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/msg_nombre"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/et_capital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/msg_nombreCapital"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_poblacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/msg_poblacion"
+        android:inputType="numberSigned" />
+
+    <CheckBox
+        android:id="@+id/cb_costas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:hint="@string/msg_costas"
+        android:textAlignment="viewStart"
+        android:textColorHint="#757575"
+        app:centerIfNoTextEnabled="false" />
+
+    <Button
+        android:id="@+id/bt_delete_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_delete_estado" />
+
+    <Button
+        android:id="@+id/bt_update_estado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_update_estado"
+        android:textColor="@color/white" />
+
+</LinearLayout>

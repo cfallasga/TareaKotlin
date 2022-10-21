@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_estado">
+
+    <fragment
+        android:id="@+id/nav_estado"
+        android:name="com.tarea.ui.estado.EstadoFragment"
+        android:label="Estados"
+        tools:layout="@layout/fragment_estado" >
+        <action
+            android:id="@+id/action_nav_estado_to_addEstadoFragment"
+            app:destination="@id/addEstadoFragment" />
+        <action
+            android:id="@+id/action_nav_estado_to_updateEstadoFragment"
+            app:destination="@id/updateEstadoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.tarea.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.tarea.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addEstadoFragment"
+        android:name="com.tarea.ui.estado.AddEstadoFragment"
+        android:label="@string/bt_add_estado"
+        tools:layout="@layout/fragment_add_estado" >
+        <action
+            android:id="@+id/action_addEstadoFragment_to_nav_estado"
+            app:destination="@id/nav_estado" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEstadoFragment"
+        android:name="com.tarea.ui.estado.UpdateEstadoFragment"
+        android:label="@string/bt_update_estado"
+        tools:layout="@layout/fragment_update_estado" >
+        <action
+            android:id="@+id/action_updateEstadoFragment_to_nav_estado"
+            app:destination="@id/nav_estado" />
+        <argument
+            android:name="estado"
+            app:argType="com.tarea.model.Estado" />
+    </fragment>
+</navigation>
